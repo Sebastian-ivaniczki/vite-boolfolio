@@ -1,10 +1,11 @@
 <script>
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
+import AppCard from './components/AppCard.vue'
 const url = 'http://127.0.0.1:8000/api/'
 export default {
   name: 'App',
-  components: {AppHeader},
+  components: {AppHeader, AppCard},
   data: ()=> ({
     projects: []
   }),
@@ -24,10 +25,8 @@ export default {
 <template>
   
   <AppHeader></AppHeader>
-  <main class="container">
-    <ul>
-      <li v-for="project in projects">{{ project.title }}</li>
-    </ul>
+  <main class="container my-5">
+    <AppCard :projects="projects"></AppCard>
   </main>
 </template>
 
