@@ -1,11 +1,11 @@
 <script>
 
 import AppHeader from './components/AppHeader.vue';
-import HomePage from './components/pages/HomePage.vue';
+
 
 export default {
   name: 'App',
-  components: {AppHeader, HomePage },
+  components: {AppHeader },
   
  
 };
@@ -15,7 +15,7 @@ export default {
   
   <AppHeader />
   <main class="container my-5">
-    <HomePage />
+   <RouterView />
   </main>
 </template>
 
