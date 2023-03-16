@@ -16,7 +16,7 @@
         <div  class="card-body">
             <h5 class="card-title">{{project.title }}</h5>
             <hr>
-            <p class="card-text">{{ project.content }}</p>
+            <p class="card-text my-5">{{ project.content }}</p>
             <hr>
             <div class="d-flex justify-content-between">
                 <p><strong>Slug: </strong>{{ project.slug }}</p>
