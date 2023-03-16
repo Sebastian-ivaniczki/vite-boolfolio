@@ -1,32 +1,21 @@
 <script>
-import axios from 'axios';
+
 import AppHeader from './components/AppHeader.vue';
-import AppCard from './components/AppCard.vue'
-const url = 'http://127.0.0.1:8000/api/'
+import HomePage from './components/pages/HomePage.vue';
+
 export default {
   name: 'App',
-  components: {AppHeader, AppCard},
-  data: ()=> ({
-    projects: []
-  }),
-  methods:{
-    fetchProjects(){
-      axios.get(url + 'projects').then((res) =>{
-        this.projects = res.data;
-      })
-    }
-  },
-  created(){
-    this.fetchProjects();
-  }
+  components: {AppHeader, HomePage },
+  
+ 
 };
 </script>
 
 <template>
   
-  <AppHeader></AppHeader>
+  <AppHeader />
   <main class="container my-5">
-    <AppCard :projects="projects"></AppCard>
+    <HomePage />
   </main>
 </template>
 
