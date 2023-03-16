@@ -18,8 +18,10 @@
             <hr>
             <p class="card-text my-5">{{ project.content }}</p>
             <hr>
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between align-items-center">
                 <p><strong>Slug: </strong>{{ project.slug }}</p>
+
+                <router-link :to="{name: 'project-detail', params:{id: project.id}}" class="btn btn-primary">Details</router-link>
             </div>
         </div>
     </div>
